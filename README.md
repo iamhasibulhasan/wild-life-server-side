@@ -1,6 +1,6 @@
 <div style="text-align:center">
     <a href="#">
-        <img width="50%" src="https://i.ibb.co/cvzVS0J/light-logo.png" />
+        <img  class="center" width="50%" src="https://i.ibb.co/cvzVS0J/light-logo.png" />
     </a>
 </div>
 
