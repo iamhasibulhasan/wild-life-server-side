@@ -1,6 +1,6 @@
 <div style="text-align:center">
     <a href="#">
-        <img src="https://i.ibb.co/dKxqq22/wild-logo.png" />
+        <img width="70%" src="https://i.ibb.co/dKxqq22/wild-logo.png" />
     </a>
 </div>
 
