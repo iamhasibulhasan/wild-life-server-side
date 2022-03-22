@@ -23,12 +23,41 @@ async function run() {
         await client.connect();
         const database = client.db('wildlifePhotography');
         const eventCollection = database.collection('events');
+        const photographerCollection = database.collection('photographers');
 
         // Get Api
         app.get('/events', async (req, res) => {
             const cursor = eventCollection.find({});
             const events = await cursor.toArray();
             res.send(events);
+        });
+        app.get('/photographers', async (req, res) => {
+            const cursor = photographerCollection.find({});
+            const photographer = await cursor.toArray();
+            res.send(photographer);
+        });
+
+        // Post Api
+        app.post('/addEvent', async (req, res) => {
+            const event = req.body;
+            // console.log(event);
+            const result = await eventCollection.insertOne(event);
+            res.json(result);
+        });
+
+        app.post('/addPhotographer', async (req, res) => {
+            const photographer = req.body;
+            console.log(photographer);
+            const result = await photographerCollection.insertOne(photographer);
+            res.json(result);
+        });
+
+        // Delete Api
+        app.delete('/photographerDelete/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const result = await photographerCollection.deleteOne(query);
+            res.json(result);
         });
 
     } finally {
