@@ -14,10 +14,12 @@ npm install
 ```
 ### live site :blush:
 ```
-http://example.com/
+https://wildlife-photography-e471c.web.app/
 ```
 ### mongodb setup (.env.example)
 
 - db name
 - db user name
 - db password
+
+### All rights reserved by [Hasibul Hasan](https://hasibul-hasan.netlify.app/)
